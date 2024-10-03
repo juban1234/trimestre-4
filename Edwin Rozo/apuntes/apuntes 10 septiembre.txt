@@ -1,0 +1,15 @@
+apuntes
+
+se puede usar el que queremos 
+value se usa para capturar el valor de la lo que sela pone
+
+    <input id="username" type="text" placeholder="name">
+    <button id="btnGreat"> saludar</button>
+
+control c+k para comentar todo
+
+con eston se conprueva el tipo de dato arroga ( typeof )
+
+Alt Gr + } , luego se le pone cualquier letra ,comillas invertidas
+
+1,002 1,332

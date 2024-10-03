@@ -32,6 +32,7 @@ const bntPredict = document.getElementById('bntPredict')
 const respone = document.getElementById('resultado') 
 const respone2 = document.getElementById('resultado2') 
 
+
 bntCalculate.addEventListener('click', calculatenotes)
 bntPredict.addEventListener('click',prediction)
 
@@ -41,7 +42,7 @@ function calculatenotes(event) {
 
     // con esto se canbi el tipo de dato a numerico ,cualquiera de las dos formas son validas
     let nota1 = Number(data1.value)
-    let nota2 = parseInt(data2.value)
+    let nota2 = Number(data2.value)
     let nota3 = Number(data3.value)
 
     let result = ((nota1 * 0.3)+(nota2 * 0.3)+(nota3 * 0.4)).toFixed(2)
@@ -55,7 +56,7 @@ function validatenotes(result) {
     if (result > 4.5) {
         respone2.style.color = "green"
         respone2.textContent = `gano superior: ${result}`   
-    } else if (result <= 4.5 && result>=3.5){
+    } else if (result >= 3.5 && result <= 4.5){
         respone2.style.color = "orange"
         respone2.textContent = `gano : ${result}`
     }else{
@@ -66,5 +67,9 @@ function validatenotes(result) {
 
 function prediction(event) {
     event.preventDefault()
-    
+    let nota1 = Number(data1.value)
+    let nota2 = Number(data2.value)
+    let result = ((3.5 - (nota1 * 0.3) - (nota2 * 0.3))/0.4).toFixed(2)
+
+    respone.textContent = `la nota minima que necesita para aprobar con 3.5 es de :  ${result}`
 }
