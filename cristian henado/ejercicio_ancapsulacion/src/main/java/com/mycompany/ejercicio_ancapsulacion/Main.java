@@ -8,15 +8,32 @@ package com.mycompany.ejercicio_ancapsulacion;
  *
  * @author SENA
  */
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        Empleado empleado1 = new Empleado("Juan Pérez", 3000.0);
-        empleado1.mostrarInfo();
-        empleado1.setNombre("Carlos Ruiz");
-        empleado1.setSalario(3500.0);
-        empleado1.setSalario(-1000.0); 
-        empleado1.mostrarInfo();
+        ArrayList<Personas> listaPersonas = new ArrayList<>();
+
+        listaPersonas.add(new Personas("Juan Pérez", 30));
+        listaPersonas.add(new Personas("Carlos Ruiz", 35));
+        listaPersonas.add(new Personas("Ana Gómez", 40));
+
+        for (Personas pep : listaPersonas) {
+            pep.mostrarInfo();
+            System.out.println("----------");
+        }
+
+        listaPersonas.get(1).setEdad(37);
+
+        System.out.println("Información actualizacion de datos:");
+        listaPersonas.get(1).mostrarInfo();
+        listaPersonas.remove(0);
+        System.out.println("\nlista de personas que solicitan trabajo en la empresa:");
+        for (Personas pep : listaPersonas) {
+            pep.mostrarInfo();
+            System.out.println("----------");
+        }
     }
 }
