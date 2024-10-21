@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    background-color: pink;
+  }
+  
+  div {
+    padding: 20px;
+    background-color: green;
+    width: max-content;
+  }
+  
+  span {
+    display: block;
+    padding: 20px;
+    background-color: blue;
+  }
