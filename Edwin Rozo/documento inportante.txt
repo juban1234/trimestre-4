@@ -1,0 +1,58 @@
+// Constante para acceder a la API
+const url = 'https://rickandmortyapi.com/api/character';
+
+// Función para traer los personajes filtrados por nombre
+const getCharacter = async (URL) => {
+    const response = await fetch(URL);
+    const data = await response.json();
+    return data.results || []; // Retorna un array vacío si no hay resultados
+};
+
+// Función para crear las tarjetas de personajes
+const characterCard = async (name = '') => {
+    // Limpia el contenedor antes de agregar nuevas tarjetas
+    document.getElementById('targets').innerHTML = '';
+
+    // Trae los personajes filtrados por nombre si existe
+    const characters = await getCharacter(`${url}?name=${name}`);
+    characters.forEach(character => {
+        makeCard(character);
+    });
+};
+
+// Función para crear tarjetas individuales
+function makeCard(character) {
+    const container = document.createElement('div');
+    container.classList.add('card');
+
+    const imgCard = document.createElement('img');
+    imgCard.src = character.image;
+    imgCard.alt = character.name;
+
+    const nameCard = document.createElement('h2');
+    nameCard.textContent = `NOMBRE: ${character.name}`;
+
+    const status = document.createElement('h3');
+    status.textContent = `ESTADO: ${character.status}`;
+
+    const specie = document.createElement('h4');
+    specie.textContent = `ESPECIE: ${character.species}`;
+
+    container.appendChild(imgCard);
+    container.appendChild(nameCard);
+    container.appendChild(status);
+    container.appendChild(specie);
+
+    document.getElementById('targets').appendChild(container);
+}
+
+// Buscador en tiempo real
+const nombres = document.getElementById('nombres');
+nombres.addEventListener('input', (event) => {
+    const searchQuery = event.target.value.trim(); // Obtener el texto ingresado y quitar espacios
+    characterCard(searchQuery); // Llamar a la función para mostrar personajes según el texto ingresado
+});
+
+// Generar el contenido inicial
+window.addEventListener('DOMContentLoaded', () => characterCard());
+

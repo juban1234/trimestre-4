@@ -1,0 +1,24 @@
+apellidos y sueldos de los empleados.
+ delimiter //
+ create procedure pa_empleados_sueldo()
+ begin
+   select nombre,apellido,sueldo
+     from empleados;
+ end //
+ delimiter ;
+ 
+ call pa_empleados_sueldo();
+ 
+ drop procedure if exists pa_empleados_hijos;
+ 
+ apellidos y cantidad de hijos de los empleados con hijos.
+ delimiter //
+ create procedure pa_empleados_hijos()
+ begin
+   select nombre,apellido,cantidadhijos
+     from empleados
+   where cantidadhijos>0;
+ end //
+ delimiter ;
+ 
+ call pa_empleados_hijos();
