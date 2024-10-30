@@ -59,4 +59,10 @@ public class Producto {
     public void setNombreProducto(String nombreProducto) {
         this.nombreProducto = nombreProducto;
     }
+
+    @Override
+    public String toString() {
+        return "Producto{" + "cantidad comprada=" + StockProducto + ", nombreProducto=" + nombreProducto+'}';
+    }
+    
 }

@@ -27,6 +27,7 @@ public class Procesos {
             pedirDatos();
             valorTotal = valorTotalP+valorTotal;
             System.out.println("cantidad a pagar es de: "+ productosMAp);
+            System.out.println();
         }
         
         System.out.println();
@@ -66,8 +67,7 @@ public class Procesos {
                 misProducto.setNombreProducto("Pollo");
                 break;
             default:
-                System.out.println("no existe este producto");
-                precioUnitario(misProducto);
+                throw new AssertionError();
         }
     }
 }
