@@ -26,10 +26,8 @@ public class Procesos {
         for (int i = 0; i < cantidadProducto; i++) {
             pedirDatos();
             valorTotal = valorTotalP+valorTotal;
-            System.out.println("cantidad a pagar es de: "+ productosMAp);
-            System.out.println();
         }
-        
+        System.out.println("factura de produtos: "+ productosMAp);
         System.out.println();
         System.out.println("valor total: "+valorTotal);
     }
