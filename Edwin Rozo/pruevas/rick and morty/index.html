@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="barra-busqueda" id="nombres" placeholder="Buscar personajes...">
+    
+    <div class="filters">
+        <h3>Categorías</h3>
+        <label><input type="checkbox" class="category-filter" value="Electrónica" checked> Electrónica</label><br>
+        <label><input type="checkbox" class="category-filter" value="Electrodomésticos" checked> Electrodomésticos</label><br>
+    </div>
+
+    <div id="targets"></div>
+    <div class="pagination">
+        <button id="prevPage">Anterior</button>
+        <button id="nextPage">Siguiente</button>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

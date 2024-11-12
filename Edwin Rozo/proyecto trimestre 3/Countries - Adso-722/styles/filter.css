@@ -28,6 +28,8 @@ fieldset > input, fieldset >select{
 .demographics{
     width: 17rem;
     height: 10rem;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     border: double 2px #4242f29f;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

@@ -25,7 +25,7 @@ public class Procesos {
         
         for (int i = 0; i < cantidadProducto; i++) {
             pedirDatos();
-            valorTotal = valorTotalP+valorTotal;
+            valorTotal += valorTotalP;
         }
         System.out.println("factura de produtos: "+ productosMAp);
         System.out.println();
@@ -48,24 +48,25 @@ public class Procesos {
     private void precioUnitario(Producto misProducto) {
         
         switch (misProducto.getProducto()) {
-            case 1:
+            case 1 -> {
                 misProducto.setPresioUnitario(100);
                 misProducto.setNombreProducto("Papa");
-                break;
-            case 2:
+            }
+            case 2 -> {
                 misProducto.setPresioUnitario(200);
                 misProducto.setNombreProducto("Huevo");
-                break;
-            case 3:
+            }
+            case 3 -> {
                 misProducto.setPresioUnitario(300);
                 misProducto.setNombreProducto("tomate");
-                break;
-            case 4:
+            }
+            case 4 -> {
                 misProducto.setPresioUnitario(400);
                 misProducto.setNombreProducto("Pollo");
-                break;
-            default:
-                throw new AssertionError();
+            }
+            default -> System.out.print("no existe este producto");
+            
         }
+
     }
 }
