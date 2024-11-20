@@ -1,0 +1,21 @@
+SINGLETON ----> SE USA CUANDO NECESITAMOS GARANTIZAR QUE UNA CLASE TIENE UNA SOLA INSTANCIA Y QUE ESA INSTANCIA ES ACCESIBLE GLOBALMENTE
+                PORQUE GARANTIZAR UNA UNICA INSTANCIA ACCESIBLE A NIVEL GLOBAL: EN OCASIONES COMO MANTENER UNA SOLA CONEXION A LA BD, UNA CONFIGURACIÓN GLOBAL ETC
+                
+                COMO SE IMPLEMENTA?  
+                1. HACER PRIVADO EL CONSTRUCTOR
+                2. CREAR UN METODO ESTATICO QUE ACTUE COMO CONSTRUCTOR
+                                                                                 
+                    
+                CONTRAS:
+                	VULNERA EL PRINCIPIO DE RESPONSABILIDAD UNICA
+                	REQUIERE DE CUIDADO CUANDO SE TRABAJA CON HILOS
+                	LAS PRUEBAS UNITARIAS REQUIEREN MOCKS
+                	
+
+1. Caso de uso: Tomar el proyecto hecho en corte pasado y analizarlo, si tiene Singleton o no. 
+   Cuáles serían las ventajas de aplicar Singleton en el proyecto?
+   Cuáles las desventajas?
+2. Caso de uso: Una empresa de desarrollo de software está construyendo una aplicación para procesamiento de imágenes.
+   La aplicación una vez una imagen es procesada, la guarda en cierto formato, en cierto tamaño y en un directorio preestablecido.
+   Crees que el patrón Singleton te puede ayudar en esta tarea ?
+3. Cree una aplicación que implemente un DTO de User, que implemente un Servicio User tenga la lógica que simule la creación de Usuarios, y también que implemente una clase Singleton que contenga la configuración de creación de usuarios y limite la creación del número de usuarios a 10. 

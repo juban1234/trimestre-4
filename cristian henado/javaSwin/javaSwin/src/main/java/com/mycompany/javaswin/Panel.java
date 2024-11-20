@@ -21,7 +21,7 @@ import javax.swing.JPanel;
 public class Panel extends JFrame implements ActionListener{  
     
     private JPanel mipanel;
-    private JButton comprar,usuario,limpiar;
+    private JButton comprar,usuario,limpiar,registrar;
     private JLabel menu , resultadoBoton;
     
     Datos datos = new Datos();
@@ -34,7 +34,6 @@ public class Panel extends JFrame implements ActionListener{
     }
 
     private void iniciarComponentes()  {
-       datos.llenarDatos();
         
         mipanel = new JPanel();
         mipanel.setLayout(null);
@@ -60,6 +59,12 @@ public class Panel extends JFrame implements ActionListener{
         limpiar.addActionListener(this);
         mipanel.add(limpiar);
         
+        registrar = new JButton("registro");
+        registrar.setBounds(50, 400, 100, 30);
+        registrar.addActionListener(this);
+        mipanel.add(registrar);
+        
+        
         resultadoBoton = new JLabel();
         resultadoBoton.setBounds(400, 100, 500, 300);
         mipanel.add(resultadoBoton);
@@ -69,14 +74,14 @@ public class Panel extends JFrame implements ActionListener{
 
 
     public void menu( ){
-        menu.setText("hola");
+        menu.setText("<html> pollo");
     }
     
     @Override
     public void actionPerformed(ActionEvent e) {
         
         if (e.getSource()== comprar) {
-            
+            String productoN = JOptionPane.showInputDialog("ingrese el producto que desea");
         }
 
         if (e.getSource() == usuario) {
@@ -85,8 +90,12 @@ public class Panel extends JFrame implements ActionListener{
         }
         
         if (e.getSource()== limpiar) {
-            JOptionPane.showMessageDialog(null,"limpiar la pagina");
-            resultadoBoton.setText("");
+            datos.llenarDatos();
+        }
+        
+        if (e.getSource()== registrar) {
+            datos.llenarDatos();
+            registrar.setVisible(false);
         }
     }
 

@@ -1,0 +1,5 @@
+ADAPTER ----> SE USA PARA PERMITIR LA COLABORACIÓN ENTRE OBJETOS INCOMPATIBLES
+		              COMO SE IMPLEMENTA? 
+                              1. Identificar las clases incompatibles
+                              2. Usar una clase existente que el adaptador debe extender para ser compatible.
+                              3. Crear la clase adaptadora
