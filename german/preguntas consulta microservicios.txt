@@ -1,7 +1,0 @@
-1 patron de arquitectura basado en microservicios
-2 como diseñar sistemas compuestos por pequeños servicios independientes
-3 ventajas y desventajas del patron microservicios
-4 proyecto basado en microservicios
-
-
-en los microservicios es mas dificil en conbtrar los errores latentes

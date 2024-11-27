@@ -1,9 +1,5 @@
 public class Application {
     public static void main(String[] args) {
-        // Crear un coche sin patrón Builder
-        Car carWithoutBuilder = new Car("Ford", "Fiesta", 5, new Engine("FordEngine"), true, true);
-        System.out.println("Car without Builder: " + carWithoutBuilder);
-
 
         CarBuilder builder = new CarBuilder();
         
